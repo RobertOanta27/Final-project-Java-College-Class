@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ctrl.WinterSportsController">
+  <tabs>
+    <Tab text="WinterGame">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="51.0" layoutY="7.0" prefHeight="552.0" prefWidth="597.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="370.0" minWidth="10.0" prefWidth="105.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="676.0" minWidth="10.0" prefWidth="492.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="94.0" minHeight="6.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="152.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="377.0" minHeight="7.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="419.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="443.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="416.0" minHeight="10.0" prefHeight="396.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Name" />
+                        <Label text="Type" GridPane.rowIndex="1" />
+                        <Label text="Mininum Age" GridPane.rowIndex="2" />
+                        <Label text="Maximum Age" GridPane.rowIndex="3" />
+                        <Label text="Date" GridPane.rowIndex="4" />
+                        <TableView fx:id="winterGameTableView" prefHeight="369.0" prefWidth="492.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                          <columns>
+                            <TableColumn prefWidth="26.0" text="ID">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="id" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="118.0" text="Name">
+                              <cellValueFactory>
+                                  <PropertyValueFactory property="name" />
+                              </cellValueFactory>
+                            </TableColumn>
+                              <TableColumn prefWidth="102.0" text="Type">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="type" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="51.0" text="MinAge">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="minAge" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="53.0" text="MaxAge">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="maxAge" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="140.0" text="Date">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="date" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="name" GridPane.columnIndex="1" />
+                        <TextField fx:id="type" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="minAge" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="maxAge" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <DatePicker fx:id="dateW" prefHeight="25.0" prefWidth="139.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Button mnemonicParsing="false" onAction="#addW" prefHeight="25.0" prefWidth="38.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="340.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#clearW" prefHeight="25.0" prefWidth="48.0" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="380.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#refreshW" prefHeight="25.0" prefWidth="72.0" text="Refresh" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="430.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#filterByW" prefHeight="25.0" prefWidth="43.0" text="Filter" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="150.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <TextField fx:id="filterW" prefHeight="25.0" prefWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="200.0" right="160.0" />
+                           </GridPane.margin>
+                        </TextField>
+                     </children>
+                  </GridPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Enrollment">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane layoutX="28.0" layoutY="30.0" prefHeight="529.0" prefWidth="672.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="331.0" minWidth="10.0" prefWidth="144.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="528.0" minWidth="10.0" prefWidth="528.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="101.0" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="212.0" minHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="299.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="390.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="379.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="379.0" minHeight="10.0" prefHeight="333.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Child Name" />
+                        <Label text="Age" GridPane.rowIndex="1" />
+                        <Label text="Parent Name" GridPane.rowIndex="2" />
+                        <Label text="Winter Game ID" GridPane.rowIndex="3" />
+                        <TextField fx:id="childName" GridPane.columnIndex="1" />
+                        <TextField fx:id="age" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="parentName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="wgID" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TableView fx:id="enrollmentTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                          <columns>
+                            <TableColumn prefWidth="17.0" text="ID">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="id" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="77.0" text="Child Name">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="nameChild" />
+                                </cellValueFactory>
+                            </TableColumn>
+                              <TableColumn prefWidth="40.0" text="Age">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="age" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="95.0" text="Parent Name">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="nameParent" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="298.0" text="WinterGame">
+                              <cellValueFactory>
+                                  <PropertyValueFactory property="winterGame" />
+                              </cellValueFactory>
+                          </TableColumn>
+                          </columns>
+                        </TableView>
+                        <Button mnemonicParsing="false" onAction="#addE" prefHeight="25.0" prefWidth="62.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Button mnemonicParsing="false" onAction="#refreshE" prefHeight="25.0" prefWidth="63.0" text="Refresh" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="70.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#clearE" prefHeight="25.0" prefWidth="48.0" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="140.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#filterByE" prefHeight="25.0" prefWidth="54.0" text="Filter" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="195.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <TextField fx:id="filterE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="255.0" />
+                           </GridPane.margin>
+                        </TextField>
+                     </children>
+                  </GridPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
